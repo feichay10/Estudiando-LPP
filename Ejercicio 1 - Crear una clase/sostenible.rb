@@ -81,3 +81,27 @@ class SostenibleTest < Test::Unit::TestCase
   assert_equal(("Granja naibolo", [1,2], ["Cerdo", "Mamifero", 90]), Sostenible.new("Granja naibolo", [1, 2], ["Cerdo", "Mamifero", 90]))
 end
 # Pasa test
+
+# Definimos el metodo to_s en la clase sostenible
+class Sostenible 
+  attr_reader :name, :footprints = [], :animals = []
+
+  def initialize(name, footprints = [], animals = [])
+    @name = name
+    @footprints = footprints
+    @animals = animals
+  end
+
+  def to_s
+    return "#{@name}, #{@footprints}, #{@animals}"
+  end
+end
+
+# Creamos un test para el metodo to_s creado
+class SostenibleTest < Test::Unit::TestCase
+  assert_not_equal(nil, Sostenible.new)
+  assert_equal("Granja naibolo", Sostenible.new("Granja naibolo"))
+  assert_equal(("Granja naibolo", [1, 2]), Sostenible.new("Granja naibolo", [1, 2]))
+  assert_equal(("Granja naibolo", [1, 2], ["Cerdo", "Mamifero", 90]), Sostenible.new("Granja naibolo", [1, 2], ["Cerdo", "Mamifero", 90]))
+  assert_equal(("Granja naibolo, 1 2, Cerdo Mamifero 90"), Sostenible.new("Granja naibolo", [1, 2], ["Cerdo", "Mamifero", 90]))
+end
