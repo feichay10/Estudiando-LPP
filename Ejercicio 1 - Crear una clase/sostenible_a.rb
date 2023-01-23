@@ -10,11 +10,14 @@
 #   |     |-- sostenible.rb
 #   |
 #   |-- /tests
-#         |-- granja_sostenible_test.rb
+#   |      |-- sostenible_test.rb
+#   |
+#   |-- Rakefile
+
 
 # La jerarquia de clases es:
 #
-#                                                     BasicObject
+#                                                    BasicObject
 #                                                        |
 #                                                      Object
 #                                                        |
