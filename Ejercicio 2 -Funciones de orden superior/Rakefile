@@ -1,0 +1,6 @@
+task :default => :test
+
+desc "Pruebas para sostenible_spec.rb"
+task :test do
+  sh "rspec ./spec/sostenible_spec.rb"
+end
