@@ -126,9 +126,7 @@ end
 # Código
 
 def minVolume (arrProds)
-  arrProds.collect { |pr|
-    pr.volumen
-  }.min
+  arrProds.collect { |pr| pr.volumen}.min
 end
 
 # Esta función cumple con el paradigma de programación funcional puesto que ni modifica ninguna 
