@@ -17,3 +17,8 @@ class TestMaxSostenible < Test::Unit::TestCase
   @cooperativa = [@sostenible1, @sostenible2, @sostenible3]
   assert_equal("Nombre_granja_correcto", max_sostenible(@cooperativa))
 end
+
+# Para conseguir el nombre de la granja más sostenible primero realizamos un collect, combinado con un reduce para 
+# de esta manera conseguir un array con la combinación lineal de cada granja y cogemos la de valor mínimo. Con este 
+# valor hacemos un find para encontrar la granja que tenga el mismo valor y conseguir el nombre de la misma. 
+# Intervienen variables de instancia y variables locales.
