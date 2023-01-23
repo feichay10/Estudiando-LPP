@@ -12,7 +12,19 @@
 #   |-- /tests
 #         |-- granja_sostenible_test.rb
 
-# La jerarquia de clases va desde Sostenible -> Object -> BasicObject
+# La jerarquia de clases es:
+#
+#                                                     BasicObject
+#                                                        |
+#                                                      Object
+#                                                        |
+#        ________________________________________________|___________
+#       |                    |         |        |        |          |
+# Test::Unit::TestCase    Symbol    String    Array   Numeric   Sostenible
+#       |                                     __________|__________
+#       |                                    |                    |
+# TestSostenible                          Integer              Numeric
+
 
 # Creamos la clase Sostenible en el directorio /lib
 class Sostenible 
