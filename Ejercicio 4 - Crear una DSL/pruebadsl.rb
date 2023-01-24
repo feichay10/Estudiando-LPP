@@ -10,13 +10,12 @@ class DSLSostenible
       else
         instance_eval(&block)
       end
-      instance_eval(&block)
     end
   end
 
   def to_s
-    output = " "
-    output << "La granja: #{@name}"
+    output = ""
+    output << "La granja: #{@name}\n"
     output << "Datos: #{@datos}\n"
     output << "Ejemplares: #{@ejemplares}\n"
   
@@ -33,16 +32,16 @@ class DSLSostenible
 
   def ejemplares(name, options = {})
     ejemplar = name
-    ejemplar << "Tipo #{options[:tipo]}" if options[:tipo]
-    ejemplar << "Precio #{options[:precio]}" if options[:precio]
+    ejemplar << "Tipo: #{options[:tipo]}" if options[:tipo]
+    ejemplar << " Precio: #{options[:precio]}" if options[:precio]
 
     @ejemplares << ejemplar
   end
 end
 
-sostenible_dsl = DSLSostenible.new(1234) do
+sostenible_dsl = DSLSostenible.new("Granja 1") do
   datos "Granja ESIT", :carbono => 45, :hidrica => 30
-  ejemplares "Vaca", :tipo => "Mamifero", :precio => 345.5
+  ejemplares "Vaca ", :tipo => "Mamifero", :precio => 345.5
 end
 
 puts sostenible_dsl
