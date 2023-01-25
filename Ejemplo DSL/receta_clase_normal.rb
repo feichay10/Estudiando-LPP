@@ -21,6 +21,7 @@ class Recipe
   end
 end
 
+# Main
 mac_and_cheese = Recipe.new("Mac and Cheese")
 
 mac_and_cheese.ingredients << "Noodles"

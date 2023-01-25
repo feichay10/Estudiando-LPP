@@ -34,7 +34,6 @@ class Recipe
   end
 
   def step(text, options = {})
-    # instruction = "===Instructions===\n"
     instruction = text
     instruction << " (#{options[:during]})" if options[:during]
 
@@ -42,6 +41,7 @@ class Recipe
   end
 end
 
+#main 
 mac_and_cheese = Recipe.new("Noodles and Cheese") do 
   ingredient "Water",   :amount => "2 cups"
   ingredient "Noodles", :amount => "1 cup"

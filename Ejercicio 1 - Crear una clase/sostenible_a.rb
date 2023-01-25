@@ -24,7 +24,7 @@
 #        ________________________________________________|___________
 #       |                    |         |        |        |          |
 # Test::Unit::TestCase    Symbol    String    Array   Numeric   Sostenible
-#       |                                     __________|__________
+#       |                                     ___________|_________
 #       |                                    |                    |
 # TestSostenible                          Integer              Numeric
 
@@ -38,7 +38,7 @@ end
 require 'lib/sostenible'
 require 'test/unit'
 
-class SostenibleTest < Test::Unit::TestCase
+class TestSostenible < Test::Unit::TestCase
   assert_not_equal(nil, Sostenible.new)
 end
 # Pasa test
@@ -53,7 +53,7 @@ class Sostenible
 end
 
 # Creamos un test para el atributo creado
-class SostenibleTest < Test::Unit::TestCase
+class TestSostenible < Test::Unit::TestCase
   assert_not_equal(nil, Sostenible.new)
   assert_equal("Granja naibolo", Sostenible.new("Granja naibolo"))
 end
@@ -61,7 +61,7 @@ end
 
 # Añadimos el conjunto footprints
 class Sostenible
-  attr_reades :name, :footprints = []
+  attr_reades :name, :footprints
 
   def initialize(name, footprints = [])
     @name = name
@@ -70,7 +70,7 @@ class Sostenible
 end
 
 # Creamos test para el conjunto creado
-class SostenibleTest < Test::Unit::TestCase
+class TestSostenible < Test::Unit::TestCase
   assert_not_equal(nil, Sostenible.new)
   assert_equal("Granja naibolo", Sostenible.new("Granja naibolo"))
   assert_equal(("Granja naibolo", [1, 2]), Sostenible.new("Granja naibolo", [1, 2]))
@@ -79,7 +79,7 @@ end
 
 # Añadimos el conjunto de animales
 class Sostenible
-  attr_reader :name, :footprints = [], :animals = []
+  attr_reader :name, :footprints, :animals
 
   def initialize(name, footprints = [], animals = [])
     @name = name
@@ -89,7 +89,7 @@ class Sostenible
 end
 
 # Creamos test para el nuevo conjunto creado
-class SostenibleTest < Test::Unit::TestCase
+class TestSostenible < Test::Unit::TestCase
   assert_not_equal(nil, Sostenible.new)
   assert_equal("Granja naibolo", Sostenible.new("Granja naibolo"))
   assert_equal(("Granja naibolo", [1, 2]), Sostenible.new("Granja naibolo", [1, 2]))
@@ -113,7 +113,7 @@ class Sostenible
 end
 
 # Creamos un test para el metodo to_s creado
-class SostenibleTest < Test::Unit::TestCase
+class TestSostenible < Test::Unit::TestCase
   assert_not_equal(nil, Sostenible.new)
   assert_equal("Granja naibolo", Sostenible.new("Granja naibolo"))
   assert_equal(("Granja naibolo", [1, 2]), Sostenible.new("Granja naibolo", [1, 2]))
