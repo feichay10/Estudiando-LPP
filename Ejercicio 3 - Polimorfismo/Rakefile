@@ -1,0 +1,6 @@
+task :default => :ut
+
+desc "Pruebas unitarias de las funciones"
+task :ut do
+  sh "ruby -I. tests/test_sostenible.rb"
+end
