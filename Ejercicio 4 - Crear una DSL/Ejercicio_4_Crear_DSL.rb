@@ -83,6 +83,7 @@ def to_s
 end
 
 # Al final la clase queda de la siguiente manera:
+# Crea las expectativas con TDD del siguiente codigo:
 class DSLSostenible
   def initialize(name, &block)
     @name = name
